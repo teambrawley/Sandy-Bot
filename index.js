@@ -1,4 +1,5 @@
-client.on('message', async message => {
+function on(discord, client, mongo){
+  client.on('message', async message => {
 const prefix = `<@!${client.user.id}>`;
 
   const enterVanityCode = new discord.MessageEmbed()
@@ -238,3 +239,6 @@ client.on('ready', () => {
   client.user.setActivity('Firewall', { type: 'PLAYING' });
 
 });
+}
+
+module.exports = on;
