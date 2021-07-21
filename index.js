@@ -1,4 +1,4 @@
-function on(discord, client, mongo){
+function on(discord, client, mongo, Joi){
   client.on('message', async message => {
 const prefix = `<@!${client.user.id}>`;
 
